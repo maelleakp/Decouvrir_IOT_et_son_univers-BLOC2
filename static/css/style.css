@@ -1,0 +1,147 @@
+/* Style de l'interface sur ordinateur et tablette */
+
+/* ENTÊTE */
+.conteneur{
+    display: flex;
+}
+.flex{
+    flex-grow: 1;
+}
+
+/* CORPS */
+body {
+   margin:0;
+   padding:0;
+   text-align: center
+}
+
+/* SECTION DE LA PAGE */
+.text {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    width: 50em
+}
+.text2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+    height:100px;
+    text-align: center;
+    border: 0.5rem solid;
+    border-color:#1ABC9C;
+    margin-top: 50px
+}
+.text3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40em;
+    text-align: center;
+    border: 0.5rem solid;
+    border-color:#1ABC9C;
+    margin-top: 50px
+}
+
+/* TABLEAU */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center
+}
+th, td {
+  padding: 5px;
+  text-align: center
+}
+
+
+/* HISTORIQUE */
+.histo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    height:100px;
+    text-align: center;
+    border: 0.5rem solid;
+    border-color:#1ABC9C;
+    margin-top: 120px;
+    padding-top: 70px
+}
+
+/* IMAGE */
+img {
+   margin-top: 70px;
+   text-align: center
+}
+
+/* PIED DE PAGE */
+footer {
+   position:fixed;
+   bottom: 0;
+   width:100%;
+   height:40px;
+   text-align: center
+}
+/*Style de l'interface sur ordinateur petit écran */
+@media screen and (max-width: 800px) {
+    .histo {
+        margin-left: auto;
+        margin-right: auto;
+        width: 20em;
+        height:100px;
+        text-align: center;
+        border: 0.5rem solid;
+        border-color:#1ABC9C;
+        margin-top: 20px;
+        padding-top: 70px
+    }
+    img {
+       margin-top: 15px;
+       text-align: center
+    }
+}
+
+/*Style de l'interface sur téléphone*/
+@media screen and (max-width: 414px) {
+
+    .text {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 20em
+    }
+
+    .text3 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 15em;
+        text-align: center;
+        border: 0.5rem solid;
+        border-color:#1ABC9C;
+        margin-top: 5px;
+        margin-bottom: 0px
+    }
+
+    .histo {
+        margin-left: auto;
+        margin-right: auto;
+        width: 15em;
+        height:100px;
+        text-align: center;
+        border: 0.5rem solid;
+        border-color:#1ABC9C;
+        margin-top: 20px;
+        padding-top: 70px
+    }
+
+    img {
+       margin-top: 100px;
+       text-align: center
+       width: 320px;
+       height: 240PX
+    }
+}
+
+
+
+

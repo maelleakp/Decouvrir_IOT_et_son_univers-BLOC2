@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bloc 2</title>
+    <title>Capteur2</title>
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body style="margin: 0px !important; background-color:#FFF6EA;">
-
 <header style="background-color:#1ABC9C;">
     <div class="conteneur">
         <div class="flex">
-            <p><h1 style="margin-top: 0px !important; margin-bottom: 0px !important;"> ATMOS</h1></p>
-<!--            <img src="{{url_for('static', filename='LOGO ATMOS.png')}}" align="middle" class="image"/>-->
+            <h1 style="margin-top: 0px !important; margin-bottom: 0px !important;"> ATMOS</h1>
         </div>
         <div class="flex">
             <a href="/">
@@ -26,22 +24,39 @@
             <p>Mon compte</p>
         </div>
     </div>
-</header>
 
-<section class="text">
-    <h2>BIENVENUE SUR ATMOS - Stations météorologiques connectées !</h2>
-    <p style="margin-bottom: 0px !important;">Cette application vous permet un accès aux températures et taux d’humidité de vos sondes personnelles.</p><br><br>
-    <div class="text3">
-        <p>-- Veuillez choisir un capteur --</p>
-        <form action="/capteur1">
-          <input type="submit" id="capteur1" name="capteur1"  value="Extérieur">
-        </form>
-        <form action="/capteur2">
-          <input type="submit" id="capteur2" name="capteur2" value="Congélateur" >
-        </form>
-        <form action="/capteur3">
-            <input type="submit" value="Bureau" id="capteur3" name="capteur3" >
-        </form>
+</header>
+<section>
+{% for donnees in data %}
+{% if donnees['NUM_C'] == '06182660' %}
+<p style="margin-top: 80px !important;">Vous affichez la température et le taux d’humidité du capteur <big><big>CONGÉLATEUR.</big></big></p>
+<div class="conteneur">
+    <div class="text2">
+        <td>
+              <p>Pictogramme</p>
+        </td>
+    </div>
+    <div class="text2">
+        <td>
+              <p>Température</p>
+              <h1>{{ donnees['TEMP_R'] }} °C</h1>
+        </td>
+    </div>
+    <div class="text2">
+        <td>
+              <p>Humidité</p>
+              <h1>None %</h1>
+        </td>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+     <div class="histo">
+        <td>
+            <form action="/histocp2">
+                <input type="submit" id="histocp2" name="histocp2" value="Afficher l'historique des données">
+            </form>
+        </td>
     </div>
 </section>
 
